@@ -14,9 +14,9 @@ function ProfileCard() {
     const imageUrl = URL.createObjectURL(file);
     setProfileImage(imageUrl);
   };
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/adminLogin");
+  const handleLogout = async () => {
+     localStorage.removeItem("userToken");
+    window.location = '/adminlogin'
   };
 
   return (
