@@ -63,7 +63,7 @@ router.get("/shop/product/:id", shopproduct);
 router.post("/inventory/create", upload.single("image"), createitem);
 router.get("/inventory/all", getinventory);
 router.get("/inventory/:id", getidinventory);
-router.put("/inventory/update/:id", updateitem);
+router.put("/inventory/update/:id",update.single("image") updateitem);
 router.delete("/inventory/delete/:id", deleteitem);
 
 // category
