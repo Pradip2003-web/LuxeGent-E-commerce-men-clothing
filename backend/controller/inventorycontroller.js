@@ -2,8 +2,7 @@ var inventory = require("../model/inventorymodel");
 
 exports.createitem = async (req, res) => {
   try {
-    console.log("FILE:", req.file);
-    console.log("BODY:", req.body);
+   
     req.body.image = req.file ? req.file.filename : null;
     var data = await inventory.create(req.body);
     res.status(201).json({
@@ -52,7 +51,11 @@ exports.getidinventory = async (req, res) => {
 
 exports.updateitem = async (req, res) => {
   try {
-    var data = await inventory.findByIdAndUpdate(req.params.id, req.body);
+     let updateData = { ...req.body };
+    if (req.file) {
+      updateData.image = req.file.filename;
+    }
+    var data = await inventory.findByIdAndUpdate(req.params.id,updateData);
     res.status(200).json({
       success: true,
       message: "item update successfully",
