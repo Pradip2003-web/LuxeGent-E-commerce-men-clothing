@@ -19,7 +19,7 @@ function InventoryRow({ item, onDelete, onView }) {
   return (
     <tr className="align-middle">
       <td className="text-muted fw-medium" style={{ width: 80 }}>
-        {item._id}
+        {item._id.slice(-6).toLowerCase()}
       </td>
 
       <td>
