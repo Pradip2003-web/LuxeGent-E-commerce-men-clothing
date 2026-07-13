@@ -54,9 +54,6 @@ function InventoryTable() {
   };
 
   useEffect(() => {
-    fetchInventory();
-  }, []);
-
   const fetchInventory = async () => {
     try {
       const response = await axios.get(
@@ -68,6 +65,8 @@ function InventoryTable() {
       console.error(err);
     }
   };
+  fetchInventory();
+  }, []);
 
   return (
     <Card className="border-0 shadow-sm rounded-4 mt-4 overflow-hidden">
