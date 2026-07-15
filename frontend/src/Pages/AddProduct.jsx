@@ -322,8 +322,8 @@ const AddProduct = () => {
                   className="me-2 mb-2"
                   variant={
                     selectedColors.includes(color)
-                      ? "primary"
-                      : "outline-primary"
+                      ? "dark"
+                      : "outline-dark"
                   }
                   onClick={() => handleColor(color)}
                 >
