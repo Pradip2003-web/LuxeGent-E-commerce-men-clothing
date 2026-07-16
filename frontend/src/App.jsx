@@ -33,7 +33,6 @@ import InventoryEdit from "./Pages/InventoryEdit";
 
 function App() {
   const [Authenticated, setAuthenticated] = useState(false);
-   const [Authenticated, setAuthenticated] = useState(false);
   useEffect(() => {
     
     const token = localStorage.getItem('userToken');
@@ -43,7 +42,7 @@ function App() {
       setAuthenticated(true);
       
     }
-  }.[]);
+  },[]);
   return (
     <>
       <BrowserRouter>
