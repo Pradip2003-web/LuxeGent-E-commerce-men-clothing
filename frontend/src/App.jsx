@@ -67,7 +67,7 @@ function App() {
           />
           <Route path="forgot-password" element={<ForgotPassword />} />
 
-           <Route path="/admin" element={Authenticated ? <AdminLayout /> : null}>
+           <Route path="/admin" element={Authenticated ? <AdminLayout /> : <Navigate to ="/adminlogin"/>}>
             <Route index element={<Dashboard />} />
 
             <Route path="dashboard" element={<Dashboard />} />
