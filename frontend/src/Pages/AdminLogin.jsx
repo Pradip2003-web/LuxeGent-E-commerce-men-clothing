@@ -73,8 +73,7 @@ function AdminLogin({ setAuthenticated }) {
         password,
       });
       if (res.data) {
-        localStorage.setItem('userToken',res
-                            data.token)
+        localStorage.setItem('userToken',res.data.token)
         toast.success("Admin login successfully");
         if (setAuthenticated) setAuthenticated(true);
         navigate("/admin/dashboard");
