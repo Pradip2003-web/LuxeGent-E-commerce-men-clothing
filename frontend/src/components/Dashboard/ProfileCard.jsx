@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Dropdown, Image } from "react-bootstrap";
 import founderImg from "../../assets/images/founder.png";
-import { useNavigate } from "react-router-dom";
+
 
 function ProfileCard() {
   const [profileImage, setProfileImage] = useState(founderImg);
-  const navigate = useNavigate();
+  
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
