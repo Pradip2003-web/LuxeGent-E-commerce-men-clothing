@@ -80,32 +80,4 @@ exports.deleteproduct = async (req, res) => {
   }
 };
 
-exports.shopproduct = async (req, res) => {
-  try {
-    var shop = await product.find({ status: Active });
-    const data = products.map((item) => ({
-      id: item._id,
-      name: item.productName,
-      brand: item.brand,
-      category: item.category,
-      color: item.color,
-      sizes: item.sizes,
-      price: item.sellingPrice,
-      originalPrice: item.mrp,
-      rating: item.rating,
-      reviews: item.reviews,
-      badge: item.badge,
-      image: "http://localhost:5000/api/shop/product/${item.image[0]}",
-    }));
-    res.status(200).json({
-      success: true,
-      message: "Fetch All Product Successfully",
-      shop,
-    });
-  } catch (error) {
-    res.status(500).json({
-      message: "Internal Server Error",
-      success: false,
-    });
-  }
-};
+
