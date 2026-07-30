@@ -14,7 +14,6 @@ const {
   getproduct,
   updateproduct,
   deleteproduct,
-  shopproduct,
 } = require("../controller/productcontroller");
 const { createcategory, getall } = require("../controller/categorycontroller");
 const {
@@ -57,7 +56,6 @@ router.get("/product/all", allproduct);
 router.get("/product/:id", getproduct);
 router.put("/product/update/:id", updateproduct);
 router.delete("/product/delete/:id", deleteproduct);
-router.get("/shop/product/:id", shopproduct);
 
 //inventory
 router.post("/inventory/create", upload.single("image"), createitem);
