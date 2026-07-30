@@ -17,7 +17,6 @@ import Wishlist from "./Pages/Wishlist";
 import AdminLogin from "./Pages/AdminLogin";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Dashboard from "./Pages/Dashboard";
-import AdminLayout from "./components/Dashboard/Adminlayout";
 import ProductTable from "./components/Dashboard/ProductTable";
 import AddProduct from "./Pages/AddProduct";
 import ProductEdit from "./Pages/ProductEdit";
@@ -68,7 +67,7 @@ function App() {
           />
           <Route path="forgot-password" element={<ForgotPassword />} />
 
-           <Route path="/admin" element={Authenticated ? <AdminLayout /> : <Navigate to="/adminlogin" />}>
+           <Route path="/admin" element={Authenticated ? <Dashboard /> : <Navigate to="/adminlogin" />}>
             <Route index element={<Dashboard />} />
 
             <Route path="dashboard" element={<Dashboard />} />
