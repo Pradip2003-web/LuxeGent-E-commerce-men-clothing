@@ -33,16 +33,17 @@ import InventoryEdit from "./Pages/InventoryEdit";
 
 function App() {
   const [Authenticated, setAuthenticated] = useState(false);
+  const [loading, setloading] = useState(true);
   useEffect(() => {
-    
     const token = localStorage.getItem("userToken");
     // console.log(token);
     
     if (token) {
       setAuthenticated(true);
-      
     }
+    setloading(false);
   },[]);
+  if (loading) return;
   return (
     <>
       <BrowserRouter>
@@ -67,7 +68,7 @@ function App() {
           />
           <Route path="forgot-password" element={<ForgotPassword />} />
 
-           <Route path="/admin" element={Authenticated ? <AdminLayout /> : null}>
+           <Route path="/admin" element={Authenticated ? <AdminLayout /> : <Navigate to="/adminlogin" />}>
             <Route index element={<Dashboard />} />
 
             <Route path="dashboard" element={<Dashboard />} />
