@@ -1,5 +1,4 @@
 import StatsSection from '../components/Dashboard/StateSection';
-import AnalyticsSection from '../components/Dashboard/AnalyticsSection';
 import RecentOrders from '../components/Dashboard/OrdersTable';
 import ProfileCard from '../components/Dashboard/ProfileCard';
 import { Col, Container, Nav, Row } from 'react-bootstrap';
@@ -40,9 +39,6 @@ function Dashboard() {
         <Nav.Link as={Link} to="/admin/customers">
           Customers
         </Nav.Link>
-        <Nav.Link as={Link} to="/admin/inventory">
-          Inventory
-        </Nav.Link>
       </Nav>
     </Col>
     
@@ -70,11 +66,6 @@ function Dashboard() {
         </Col>
       </Row>
 
-      <Row className="mb-4">
-        <Col>
-          <AnalyticsSection />
-        </Col>
-      </Row>
 
       <Row>
         <Col>

@@ -24,11 +24,6 @@ function Sidebar() {
       path: '/admin/customers',
     },
     {
-      title: 'Inventory',
-      icon: 'bi-stack',
-      path: '/admin/inventory',
-    },
-    {
       title: 'Analytics',
       icon: 'bi-graph-up',
       path: '/admin/analytics',

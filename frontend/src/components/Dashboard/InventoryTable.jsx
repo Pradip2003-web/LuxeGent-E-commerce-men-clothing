@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import InventoryRow from "./InventoryRow";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ProfileCard from "./ProfileCard";
 import axios from "axios";
 
@@ -88,19 +88,7 @@ function InventoryTable() {
           </Col>
         </Row>
 
-        <Row className="mb-3">
-          <Col className="d-flex justify-content-end">
-            <Link to="/admin/add-inventory" className="text-decoration-none">
-              <Button
-                variant="dark"
-                className="d-flex align-items-center gap-2 px-3 py-2 fw-semibold"
-              >
-                <i className="bi bi-plus-lg"></i>
-                Add Stock
-              </Button>
-            </Link>
-          </Col>
-        </Row>
+
 
         <Row className="mb-4">
           <Col md={4}>

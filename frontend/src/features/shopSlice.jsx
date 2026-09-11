@@ -1,4 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
+import tshirtImg from '../assets/images/tshirt-1.jpg';
+import shirtImg from '../assets/images/zarashirt.jfif';
+import jacketImg from '../assets/images/nike_jacket.webp';
+import jeansImg from '../assets/images/Slim Fit Jeans.jfif';
+
 
 const products = [
   {
@@ -13,8 +18,7 @@ const products = [
     rating: 4.7,
     reviews: 120,
     badge: 'New',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrLMfhz671ASe9ebi37MuXxTS9ZRWLNwGBWOQMFQw9ZkSxlV83rweSKyc&s=10',
+    image: tshirtImg,
   },
   {
     id: 2,
@@ -28,7 +32,7 @@ const products = [
     rating: 4.5,
     reviews: 95,
     badge: 'Sale',
-    image: 'https://picsum.photos/300/400?random=2',
+    image: shirtImg,
   },
   {
     id: 3,
@@ -42,7 +46,7 @@ const products = [
     rating: 4.8,
     reviews: 88,
     badge: 'Best Seller',
-    image: 'https://picsum.photos/300/400?random=3',
+    image: jacketImg,
   },
   {
     id: 4,
@@ -56,7 +60,7 @@ const products = [
     rating: 4.6,
     reviews: 210,
     badge: 'Sale',
-    image: 'https://picsum.photos/300/400?random=4',
+    image: jeansImg,
   },
 ];
 

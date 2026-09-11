@@ -26,7 +26,6 @@ import CustomerView from "./Pages/CustomerView";
 import CustomerEdit from "./Pages/CustomerEdit";
 import RecentOrders from "./components/Dashboard/OrdersTable";
 import InventoryTable from "./components/Dashboard/InventoryTable";
-import AddInventory from "./Pages/AddInventory";
 import InventoryView from "./Pages/Inventoryview";
 import InventoryEdit from "./Pages/InventoryEdit";
 
@@ -80,7 +79,6 @@ function App() {
             <Route path="customer/edit/:id" element={<CustomerEdit />} />
             <Route path="orders" element={<RecentOrders />} />
             <Route path="inventory" element={<InventoryTable />} />
-            <Route path="add-inventory" element={<AddInventory />} />
             <Route path="view-inventory/:id" element={<InventoryView />} />
             <Route path="edit-inventory/:id" element={<InventoryEdit />} />
           </Route>

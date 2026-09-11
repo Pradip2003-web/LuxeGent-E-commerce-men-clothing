@@ -66,7 +66,7 @@ function InventoryEdit() {
       }
       await axios.put(`http://localhost:5000/api/inventory/update/${id}`);
         
-      navigate("/admin/inventory");
+      navigate("/admin/add-inventory");
     } catch (err) {
       console.error("Update failed:", err);
     }

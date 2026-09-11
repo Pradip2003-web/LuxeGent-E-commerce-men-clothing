@@ -2,13 +2,17 @@ import { useState } from 'react';
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 import Navbar from '../components/Home/Navbar';
 import Footer from '../components/Home/Footer';
+import shirtImg from '../assets/images/cottonshirt.jfif';
+import jeansImg from '../assets/images/Slim Fit Jeans.jfif';
+import jacketImg from '../assets/images/Casual Jacket.jfif';
+import tshirtImg from '../assets/images/classic tshirt.jfif';
 
 const products = [
   {
     id: 1,
     name: 'Premium Cotton Shirt',
     category: 'Shirts',
-    image: '',
+    image: shirtImg,
     price: 1499,
     oldPrice: 1999,
     rating: 4.8,
@@ -18,7 +22,7 @@ const products = [
     id: 2,
     name: 'Slim Fit Jeans',
     category: 'Jeans',
-    image: '',
+    image: jeansImg,
     price: 2299,
     oldPrice: 2899,
     rating: 4.7,
@@ -28,7 +32,7 @@ const products = [
     id: 3,
     name: 'Casual Jacket',
     category: 'Jacket',
-    image: '',
+    image: jacketImg,
     price: 1899,
     oldPrice: 2499,
     rating: 4.9,
@@ -38,7 +42,7 @@ const products = [
     id: 4,
     name: 'Classic T-shirt',
     category: 'T-shirt',
-    image: '',
+    image: tshirtImg,
     price: 3299,
     oldPrice: 3999,
     rating: 4.6,

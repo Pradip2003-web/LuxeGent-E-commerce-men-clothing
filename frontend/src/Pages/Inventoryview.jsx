@@ -50,7 +50,7 @@ function InventoryView() {
             Edit Inventory
           </Button>
 
-          <Button as={Link} to="/admin/inventory" variant="outline-secondary">
+          <Button as={Link} to="/admin/add-inventory" variant="outline-secondary">
             <i className="bi bi-arrow-left me-2"></i>
             Back
           </Button>
